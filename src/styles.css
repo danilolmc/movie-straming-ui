@@ -25,3 +25,7 @@ ul {
 li{
   cursor: pointer;
 }
+
+button{
+  cursor: pointer;
+}

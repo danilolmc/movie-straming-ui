@@ -3,12 +3,18 @@ footer{
   height:  30vh;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 1rem 8rem 1rem 5rem;
+  padding: 20px 8rem 1rem 5rem;
   box-shadow: -10px -10px 40px rgba(0, 0, 0, .07);
-  display: grid;
-  grid-template-columns: 50% 12%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+footer > .data-movie-container{
+
+  width: 100%;
+  max-width: 40vw;
 }
 
 footer > .data-movie-container > *{
@@ -28,7 +34,17 @@ footer > .data-movie-container  p{
 }
 
 .rating-container span{
-  color: red;
+  font-size: 1.3rem;
+}
+
+.fullyellow{
+
+  color: var(--yellow);
+}
+
+.standardStyle{
+  color:var(--gray);
+  filter: brightness(125%);
 }
 
 
@@ -43,8 +59,8 @@ footer .play-film-container{
 footer .play-film-container button{
   background: var(--purple);
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 10vh;
+  height: 10vh;
   box-shadow: 0 10px 30px var(--purple);
   font-size: 1.7rem;
   color: #ffffff;

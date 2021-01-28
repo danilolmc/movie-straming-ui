@@ -25,4 +25,14 @@ export class MovieInformationsComponent implements OnInit {
 
   }
 
+  getStarsNumber(rating : number) : Array<string>{
+
+    return Array(rating).fill("");
+  }
+
+  getCustomStyle(index : number, rating: number){
+
+      return (index + 1) > rating ? 'standardStyle' : 'fullyellow';
+  }
+
 }

@@ -11,7 +11,7 @@
 .carrousel{
   display: flex;
   overflow-x: scroll;
-  padding:  7vh 2vw 7vh 2vw;
+  padding:  7vh 2vw 8vh 2vw;
   scroll-behavior: smooth;
 }
 
@@ -44,7 +44,7 @@ input[type="radio"]{
 
 
 input[type="radio"]:checked ~ div{
-  transform: scale(1.1);
+  transform: scale(1.18);
 }
 
 div.card img{
