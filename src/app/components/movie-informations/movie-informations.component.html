@@ -1,0 +1,22 @@
+<footer *ngIf="movie">
+  <div class="data-movie-container">
+    <h1>{{movie.name}}</h1>
+    <div class="rating-container">
+
+      <span>
+        <fa-icon [icon]="ratingStar"></fa-icon>
+      </span>
+    </div>
+    <p>{{movie.description}}</p>
+  </div>
+
+  <div class="play-film-container">
+    <button>
+      <span>
+        <fa-icon [icon]="playIcon"></fa-icon>
+      </span>
+    </button>
+    <span>Play</span>
+  </div>
+
+</footer>

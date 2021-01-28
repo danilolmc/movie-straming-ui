@@ -6,19 +6,23 @@ import { MoviesCarrouselComponent } from './components/movies-carrousel/movies-c
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/header/header.component';
+import { MovieService } from './services/movies.service';
+import { MovieInformationsComponent } from './components/movie-informations/movie-informations.component';
+import { CarrouselMoviesModule } from './components/movies-carrousel/carrousel-movies.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MoviesCarrouselComponent
+    MovieInformationsComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    CommonModule
+    CommonModule,
+    CarrouselMoviesModule
   ],
-  providers: [],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

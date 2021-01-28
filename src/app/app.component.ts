@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Movie } from './core/Movie';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-streaming-ui';
+
+  selectedMovie !: Movie;
+
+  mostrarDados(movie :  Movie){
+    this.selectedMovie = movie
+  }
 }

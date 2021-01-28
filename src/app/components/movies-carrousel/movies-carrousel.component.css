@@ -1,9 +1,9 @@
 .movie-carrousel{
-  margin-top: 3vh;
-  overflow-x: hidden;
+  margin-top: -5vh;
+  justify-self: flex-start;
 }
 
-.carrousel::-webkit-scrollbar{
+::-webkit-scrollbar{
   height: 0;
 }
 
@@ -11,7 +11,7 @@
 .carrousel{
   display: flex;
   overflow-x: scroll;
-  padding:  0 2vw 5vh 2vw;
+  padding:  7vh 2vw 7vh 2vw;
   scroll-behavior: smooth;
 }
 
@@ -28,13 +28,29 @@
 }
 
 div > div.card{
-  background: url("https://images-na.ssl-images-amazon.com/images/I/51A6IuDCdOL._AC_.jpg");
   background-size: cover;
-  width: 320px;
-  height: 46vh;
+  width: 300px;
+  height: 42vh;
   border-radius: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 50px rgba(0, 0, 0, .3);
+  transition: .3s ease;
 
+}
+
+input[type="radio"]{
+  pointer-events: none;
+  opacity: 0;
+}
+
+
+input[type="radio"]:checked ~ div{
+  transform: scale(1.1);
+}
+
+div.card img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .carrousel > div:last-of-type{

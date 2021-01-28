@@ -1,5 +1,6 @@
 <div class="container">
 <app-header></app-header>
-<app-movies-carrousel></app-movies-carrousel>
+<app-movies-carrousel (selectedMovieData)="mostrarDados($event)"></app-movies-carrousel>
+<app-movie-informations [movie]="selectedMovie"></app-movie-informations>
 </div>
 

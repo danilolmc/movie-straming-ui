@@ -1,49 +1,14 @@
 <section class="movie-carrousel">
   <div class="carrousel">
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
-    </div>
-    <div>
-      <div class="card">asdas</div>
+    <div
+      *ngFor="let movie of movies$ | async"
+    >
+      <input type="radio" id="{{ movie.name }}" name="radio" #radioButton (click)="selectMovie(movie)"/>
+      <div class="card">
+        <label for="{{ movie.name }}">
+          <img src="{{ movie.posterUrl }}" alt="" />
+        </label>
+      </div>
     </div>
   </div>
 </section>
