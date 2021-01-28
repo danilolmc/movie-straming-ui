@@ -1,0 +1,48 @@
+.movie-carrousel{
+  margin-top: 3vh;
+  overflow-x: hidden;
+}
+
+.carrousel::-webkit-scrollbar{
+  height: 0;
+}
+
+
+.carrousel{
+  display: flex;
+  overflow-x: scroll;
+  padding:  0 2vw 5vh 2vw;
+  scroll-behavior: smooth;
+}
+
+
+.carrousel > div{
+
+  min-width: 390px;
+  min-height: 45vh;
+  width: 320px;
+  height: 45vh;
+  padding: 0px 20px;
+  display: grid;
+  transform: translateX(-.2vw);
+}
+
+div > div.card{
+  background: url("https://images-na.ssl-images-amazon.com/images/I/51A6IuDCdOL._AC_.jpg");
+  background-size: cover;
+  width: 320px;
+  height: 46vh;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
+
+}
+
+.carrousel > div:last-of-type{
+  width: 350px;
+  height: 46vh;
+}
+
+
+div:last-of-type > div.card{
+  display: block;
+}
