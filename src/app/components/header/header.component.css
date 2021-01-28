@@ -1,0 +1,53 @@
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vh 3vw;
+}
+
+div.logo-container{
+  display: flex;
+  column-gap: .5vw;
+  align-items: center;
+}
+
+div.logo-container fa-icon{
+  color: var(--purple);
+}
+
+div.logo-container label{
+  font-size: 1.5rem;
+  color: var(--gray);
+  filter: brightness(60%);
+}
+
+
+fa-icon{
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  column-gap: 10vw;
+}
+
+ul span{
+  color: var(--gray);
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .5s ease;
+}
+
+ul li:nth-of-type(2) span{
+  color: var(--purple);
+}
+
+li span:hover{
+  opacity: .6;
+}
+
+div.search-container span{
+  color: var(--gray);
+  filter: brightness(80%);
+}
