@@ -49,11 +49,7 @@ export class MovieInformationsComponent implements OnInit,OnChanges {
 
     this.movies.getMovies().subscribe(m => console.log(this.movies))
 
-    this.movies.removeAndReturnMovies().subscribe(m => console.log(this.movies))
-
   }
-
-
 
   getStarsNumber(rating : number) : Array<string>{
 

@@ -4,7 +4,7 @@
 }
 
 ::-webkit-scrollbar{
-  height: 0;
+  height: 2px;
 }
 
 
@@ -21,7 +21,7 @@
   min-width: 390px;
   min-height: 45vh;
   width: 320px;
-  height: 45vh;
+  height: 440px;
   padding: 0px 20px;
   display: grid;
   transform: translateX(-.2vw);
@@ -30,7 +30,7 @@
 div > div.card{
   background-size: cover;
   width: 300px;
-  height: 42vh;
+  height: 400px;
   border-radius: 10px;
   box-shadow: 0 10px 50px rgba(0, 0, 0, .3);
   transition: .3s ease;
@@ -61,4 +61,37 @@ div.card img{
 
 div:last-of-type > div.card{
   display: block;
+}
+
+
+.previous-button,.next-button{
+
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  /* padding: 1rem; */
+  align-self: center;
+  z-index: 10;
+  font-size: 2rem;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  margin: 0 20px;
+  transition: .5s ease;
+}
+
+
+.previous-button:hover,.next-button:hover{
+
+  background: rgba(255, 255, 255, .3);
+}
+
+.previous-button{
+  left: 0;
+}
+.next-button{
+  right: 0;
 }
