@@ -11,7 +11,15 @@ export class AppComponent {
 
   selectedMovie !: Movie;
 
+  showModal = false;
+
   mostrarDados(movie :  Movie){
     this.selectedMovie = movie
   }
+
+  openModal(isVisible : boolean){
+
+    this.showModal = isVisible;
+  }
+
 }

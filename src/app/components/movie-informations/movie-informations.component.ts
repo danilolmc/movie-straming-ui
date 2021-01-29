@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { MovieService } from 'src/app/services/movies.service';
 import {faStar, faPlay} from "@fortawesome/free-solid-svg-icons";
 import { Movie } from 'src/app/core/Movie';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ManageMovieVisibilityService } from 'src/app/services/manage-trailer-visibility.service';
 
 @Component({
   selector: 'app-movie-informations',
@@ -29,21 +30,16 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class MovieInformationsComponent implements OnInit,OnChanges {
+export class MovieInformationsComponent implements OnInit {
 
   ratingStar = faStar;
   playIcon = faPlay;
 
+  @Output() openModal =  new EventEmitter();
+
   @Input() movie !: Movie;
 
-  footerMovieStatus = 'isHidden';
-
-  constructor(private movies : MovieService) { }
-
-  ngOnChanges() {
-
-    this.footerMovieStatus = this.movie ? 'isShown' : 'isHidden';
-  }
+  constructor(private movies : MovieService, private modalService : ManageMovieVisibilityService) { }
 
   ngOnInit(): void {
 
@@ -60,5 +56,10 @@ export class MovieInformationsComponent implements OnInit,OnChanges {
 
       return (index + 1) > rating ? 'standardStyle' : 'fullyellow';
   }
+
+   playVideo(){
+     this.modalService.seeVideo(true, this.movie.trailerurl);
+     console.log(this.movie.trailerurl)
+   }
 
 }

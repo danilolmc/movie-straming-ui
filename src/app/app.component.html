@@ -1,6 +1,7 @@
 <div class="container">
 <app-header></app-header>
 <app-movies-carrousel (selectedMovieData)="mostrarDados($event)"></app-movies-carrousel>
-<app-movie-informations [movie]="selectedMovie"></app-movie-informations>
+<app-movie-informations [movie]="selectedMovie" (openModal)="openModal($event)"></app-movie-informations>
+<app-movie-modal [modalIsVisible]="showModal"></app-movie-modal>
 </div>
 
