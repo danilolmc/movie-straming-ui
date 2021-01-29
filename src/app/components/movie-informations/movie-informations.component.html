@@ -1,4 +1,4 @@
-<footer *ngIf="movie">
+<footer [@showHideFooter]="movie != null ? 'isShown' : 'isHidden'">
   <div class="data-movie-container">
     <h1>{{ movie.name }}</h1>
     <div class="rating-container">

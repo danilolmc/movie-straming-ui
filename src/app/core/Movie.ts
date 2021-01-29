@@ -2,6 +2,6 @@ export interface Movie{
 
    posterUrl: String;
    name: String;
-   rating: Number;
+   rating: number;
    description: String;
 }

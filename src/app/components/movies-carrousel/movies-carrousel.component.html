@@ -1,5 +1,5 @@
 <section class="movie-carrousel">
-  <div class="carrousel">
+  <div class="carrousel" @listFilmAnimation>
     <div
       *ngFor="let movie of movies$ | async"
     >
@@ -11,4 +11,8 @@
       </div>
     </div>
   </div>
+  <footer>
+    <button>Prev</button>
+    <button>Next</button>
+  </footer>
 </section>

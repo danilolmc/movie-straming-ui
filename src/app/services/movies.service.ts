@@ -9,7 +9,7 @@ export class MovieService {
 
   movies: Movie[] = [
     {
-      posterUrl: "https://www.movieartarena.com/imgs/boltff.jpg",
+      posterUrl: "https://images-na.ssl-images-amazon.com/images/I/51SGqarLdFL._AC_.jpg",
       name: "Bolt",
       description: " having spent his entire life on the set of a television series, thinks that he has super powers. When he believes that his human owner, Penny, has been kidnapped, he sets out on a cross-country journey to \"rescue\" her.",
       rating: 3
