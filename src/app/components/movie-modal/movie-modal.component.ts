@@ -1,8 +1,7 @@
-import { Component, OnInit, Output, Input, ViewChild, ElementRef, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Observable } from 'rxjs';
 import { ManageMovieVisibilityService } from 'src/app/services/manage-trailer-visibility.service';
-import { of, Observable } from 'rxjs';
-import { ModalData } from 'src/app/core/ModalInterface';
 
 @Component({
   selector: 'app-movie-modal',

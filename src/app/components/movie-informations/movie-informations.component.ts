@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input,  Output, EventEmitter } from '@angular/core';
 import { MovieService } from 'src/app/services/movies.service';
 import {faStar, faPlay} from "@fortawesome/free-solid-svg-icons";
 import { Movie } from 'src/app/core/Movie';

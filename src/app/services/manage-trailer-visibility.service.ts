@@ -5,7 +5,6 @@ import { ModalData } from "../core/ModalInterface"
 @Injectable({
   providedIn: 'root'
 })
-
 export class ManageMovieVisibilityService {
 
   modalIsVisible = new BehaviorSubject<ModalData>({ isModalVisible: false, videoLink: "" });
