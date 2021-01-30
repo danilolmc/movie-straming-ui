@@ -43,7 +43,7 @@ export class MoviesCarrouselComponent implements OnInit {
 
   selectMovie(movie: Movie){
     this.selectedMovieData.emit(movie);
-    this.render.setStyle(this.carrousel.nativeElement, 'margin-top', '-17vh');
+    this.render.setStyle(this.carrousel.nativeElement, 'margin-top', '-13vh');
   }
 
   scroolRight(){

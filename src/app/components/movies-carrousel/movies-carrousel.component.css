@@ -1,5 +1,5 @@
 .movie-carrousel{
-  margin-top: 190px;
+  margin-top: 160px;
   justify-self: flex-start;
 }
 
@@ -11,7 +11,8 @@
 .carrousel{
   display: flex;
   overflow-x: scroll;
-  padding:  12vh 2vw 9vh 50px;
+  padding:  12vh 2vw 8vh 50px;
+  margin: 0;
   scroll-behavior: smooth;
   scroll-snap-align: center;
   transition: .5s ease;
