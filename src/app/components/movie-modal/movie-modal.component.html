@@ -1,9 +1,9 @@
 <section
+
   class="modal"
   [@showhideModal]="
     (modalData$ | async).isModalVisible ? 'isShown' : 'isHidden'
   "
-  #modal
   (click)="hideModal()"
 >
   <iframe

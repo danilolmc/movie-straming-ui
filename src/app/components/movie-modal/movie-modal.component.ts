@@ -24,11 +24,11 @@ import { ModalData } from 'src/app/core/ModalInterface';
     ])
    ],
 })
-export class MovieModalComponent implements OnInit, OnChanges{
+export class MovieModalComponent{
 
   @Input() modalIsVisible = false;
 
-  modalData$ : Observable<ModalData>;
+  modalData$ : Observable<any>;
 
   showModal = this.modalIsVisible;
 
@@ -37,18 +37,8 @@ export class MovieModalComponent implements OnInit, OnChanges{
     this.modalData$ = this.modalService.getModalIsVisible();
    }
 
-  ngOnInit(): void {
-
-    this.modalData$.subscribe(data =>  {
-      console.log(data)
-    })
-  }
-
-  ngOnChanges(){
-  }
 
   hideModal(){
-
     this.modalService.seeVideo(false);
   }
 }

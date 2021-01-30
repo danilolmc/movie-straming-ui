@@ -1,7 +1,7 @@
 <footer [@showHideFooter]="movie ? 'isShown' : 'isHidden'">
 
   <div *ngIf="movie" class="data-movie-container">
-    <h1>{{ movie.name || "No data" }}</h1>
+    <h1>{{ movie.name}}</h1>
     <div class="rating-container">
       <span class="fullyellow" *ngFor="let stars of getStarsNumber(5); index as i" [className]="getCustomStyle(i,movie.rating)">
         <fa-icon [icon]="ratingStar"></fa-icon>

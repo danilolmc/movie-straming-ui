@@ -20,7 +20,7 @@ import { ManageMovieVisibilityService } from 'src/app/services/manage-trailer-vi
 
       state('isShown', style({
         opacity: 1,
-        transform: 'translateY(3vw,2vh)',
+        transform: 'translate(0vw,-2.2vh)',
         pointerEvents: 'all',
         marginBottom: '0%'
       })),

@@ -62,9 +62,16 @@ footer .play-film-container button{
   border-radius: 50%;
   width: 10vh;
   height: 10vh;
-  box-shadow: 0 10px 30px var(--purple);
+  box-shadow: 0 10px 40px -8px var(--purple);
   font-size: 1.7rem;
   color: #ffffff;
+  transition: .5s;
+}
+
+footer .play-film-container button:hover{
+  background: var(--purple);
+  box-shadow: 0 15px 40px -5px var(--purple);
+  filter: brightness(105%);
 }
 
 button span{

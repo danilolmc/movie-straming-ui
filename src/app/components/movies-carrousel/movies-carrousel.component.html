@@ -1,15 +1,17 @@
 <section class="movie-carrousel">
-  <div class="carrousel" @listFilmAnimation  #carrousel>
+  <div class="carrousel" @listFilmAnimation #carrousel>
     <button class="previous-button" (click)="scroolLeft()">
       <fa-icon [icon]="arrowLeft"></fa-icon>
     </button>
-    <div
-    *ngFor="let movie of movies$ | async"
-    >
-      <input type="radio" id="{{ movie.name }}" name="radio" #radioButton (click)="selectMovie(movie)"/>
-      <div class="card">
-        <label for="{{ movie.name }}">
-          <img src="{{movie.posterUrl}}" alt="" />
+    <div *ngFor="let movie of movies$ | async">
+      <input
+        type="radio"
+        id="{{ movie.name | idInput }}"
+        name="radio"
+      />
+      <div class="card" (click)="selectMovie(movie)">
+        <label for="{{ movie.name | idInput }}">
+          <img src="{{ movie.posterUrl }}" [alt]="movie.name + 'poster'" />
         </label>
       </div>
     </div>

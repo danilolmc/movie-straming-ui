@@ -9,6 +9,7 @@ import { MovieInformationModule } from './components/movie-informations/movie-in
 import { HeaderModule } from './components/header/header.module';
 import { MovieModalModule } from './components/movie-modal/movie-modal.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
