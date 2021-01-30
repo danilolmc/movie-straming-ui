@@ -1,0 +1,15 @@
+<section
+
+  class="modal"
+  [@showhideModal]="
+    (modalData$ | async).isModalVisible ? 'isShown' : 'isHidden'
+  "
+  (click)="hideModal()"
+>
+  <iframe
+    *ngIf="(modalData$ | async).isModalVisible"
+    [src]="((modalData$ | async).videoLink | safe)"
+    allowfullscreen
+    title="Movie"
+  ></iframe>
+</section>

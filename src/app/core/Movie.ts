@@ -1,7 +1,8 @@
 export interface Movie{
 
-   posterUrl: String;
-   name: String;
+   posterUrl: string;
+   name: string;
    rating: number;
-   description: String;
+   description: string;
+   trailerurl: string;
 }

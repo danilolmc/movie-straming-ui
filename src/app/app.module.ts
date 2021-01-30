@@ -7,6 +7,8 @@ import { MovieService } from './services/movies.service';
 import { CarrouselMoviesModule } from './components/movies-carrousel/carrousel-movies.module';
 import { MovieInformationModule } from './components/movie-informations/movie-informations.module';
 import { HeaderModule } from './components/header/header.module';
+import { MovieModalModule } from './components/movie-modal/movie-modal.module';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import { HeaderModule } from './components/header/header.module';
   imports: [
     BrowserModule,
     CommonModule,
+    HeaderModule,
     CarrouselMoviesModule,
     MovieInformationModule,
-    HeaderModule
+    MovieModalModule
 
   ],
   providers: [MovieService],

@@ -26,6 +26,8 @@ export class MoviesCarrouselComponent implements OnInit {
 
   movies$ ?: Observable<Movie[]>;
 
+  movieIsSelected = true;
+
   arrowRight = faAngleRight;
 
   arrowLeft = faAngleLeft;
@@ -42,6 +44,7 @@ export class MoviesCarrouselComponent implements OnInit {
   }
 
   selectMovie(movie: Movie){
+
     this.selectedMovieData.emit(movie);
   }
 
