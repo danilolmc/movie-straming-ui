@@ -59,7 +59,6 @@ export class MovieInformationsComponent implements OnInit {
 
    playVideo(){
      this.modalService.seeVideo(true, this.movie.trailerurl);
-     console.log(this.movie.trailerurl)
    }
 
 }

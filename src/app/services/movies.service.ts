@@ -63,12 +63,4 @@ export class MovieService {
 
     return of(this.movies);
   }
-
-  removeAndReturnMovies(): Observable<Movie[]>{
-
-    const newListOfMovies = this.movies.splice(-1);
-
-    return of(newListOfMovies);
-  }
-
 }
