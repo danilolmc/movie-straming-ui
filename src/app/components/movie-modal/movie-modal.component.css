@@ -1,5 +1,5 @@
 .modal{
-  position:absolute;
+  position: fixed;
   top: 0;
   z-index: 100;
   width: 100vw;
@@ -10,6 +10,6 @@
 }
 
 iframe{
-  width: 60vw;
-  height: 70vh;
+  height: 80vh;
+  width: 70vw;
 }

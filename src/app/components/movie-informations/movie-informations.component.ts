@@ -14,15 +14,16 @@ import { ManageMovieVisibilityService } from 'src/app/services/manage-trailer-vi
       state('isHidden', style({
         opacity: 0,
         transform: 'translateY(10vh)',
+        marginTop: "-10vh",
         pointerEvents: 'none',
 
       })),
 
       state('isShown', style({
         opacity: 1,
-        transform: 'translate(0vw,-2.2vh)',
+        transform: 'translate(0vw,-2vh)',
         pointerEvents: 'all',
-        marginBottom: '0%'
+        marginBottom: '-2.5vh'
       })),
 
       transition('isHidden=>isShown', animate('.5s ease')),

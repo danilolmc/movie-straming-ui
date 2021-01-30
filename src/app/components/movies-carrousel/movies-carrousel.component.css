@@ -1,5 +1,5 @@
 .movie-carrousel{
-  margin-top: -5vh;
+  margin-top: 190px;
   justify-self: flex-start;
 }
 
@@ -11,8 +11,10 @@
 .carrousel{
   display: flex;
   overflow-x: scroll;
-  padding:  11vh 2vw 9vh 2vw;
+  padding:  12vh 2vw 9vh 50px;
   scroll-behavior: smooth;
+  scroll-snap-align: center;
+  transition: .5s ease;
 }
 
 
@@ -54,11 +56,6 @@ div.card img{
   border-radius: 10px;
 }
 
-.carrousel > div:last-of-type{
-  width: 350px;
-  height: 46vh;
-}
-
 
 div:last-of-type > div.card{
   display: block;
@@ -70,7 +67,6 @@ div:last-of-type > div.card{
   position: absolute;
   height: 60px;
   width: 60px;
-  /* padding: 1rem; */
   align-self: center;
   z-index: 10;
   font-size: 2rem;
@@ -95,4 +91,11 @@ div:last-of-type > div.card{
 }
 .next-button{
   right: 0;
+}
+
+
+@media(max-width: 769px){
+  .previous-button,.next-button{
+    display:none
+  }
 }
