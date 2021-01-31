@@ -100,3 +100,37 @@ div:last-of-type > div.card{
     display:none
   }
 }
+
+
+@media(max-width: 426px){
+
+  .card{
+    transform: scale(.9);
+  }
+
+  input[type="radio"]:checked ~ div{
+    transform: scale(1.15);
+    box-shadow: 0 30px 50px -25px rgba(0, 0, 0, .3);
+  }
+
+  .carrousel{
+    padding-left: 10%;
+  }
+
+  .carrousel div{
+    transform: translateX(-.5vw);
+  }
+
+}
+
+@media(max-width: 321px){
+
+  .card{
+    transform: scale(.5);
+  }
+
+  input[type="radio"]:checked ~ div{
+    transform: scale(1);
+    box-shadow: 0 30px 50px -25px rgba(0, 0, 0, .3);
+  }
+}
