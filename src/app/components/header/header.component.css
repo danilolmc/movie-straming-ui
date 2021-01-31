@@ -2,7 +2,11 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5vh 3vw;
+  padding: 4vh 55px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: var(--light-gray);
 }
 
 div.logo-container{
@@ -50,4 +54,12 @@ li span:hover{
 div.search-container span{
   color: var(--gray);
   filter: brightness(80%);
+}
+
+
+
+@media(max-width: 769px){
+  nav{
+    display: none;
+  }
 }

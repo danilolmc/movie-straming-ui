@@ -10,7 +10,7 @@ export class MovieService {
   movies: Movie[] = [
     {
       posterUrl: "https://images-na.ssl-images-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg",
-      name: "Avangers : End Game",
+      name: "Avengers : End Game",
       description: " having spent his entire life on the set of a television series, thinks that he has super powers. When he believes that his human owner, Penny, has been kidnapped, he sets out on a cross-country journey to \"rescue\" her.",
       rating: 3,
       trailerurl: "https://www.youtube.com/embed/6ZfuNTqbHE8"
@@ -63,12 +63,4 @@ export class MovieService {
 
     return of(this.movies);
   }
-
-  removeAndReturnMovies(): Observable<Movie[]>{
-
-    const newListOfMovies = this.movies.splice(-1);
-
-    return of(newListOfMovies);
-  }
-
 }

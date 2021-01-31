@@ -3,9 +3,15 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  overflow: hidden;
 }
 
-app-movies-carrouse{
+app-movies-carrousel{
   transition: all 1s ease;
 }
+
+app-movie-informations{
+  /* overflow: hidden; */
+  height: auto;
+  justify-self: flex-end;
+}
+

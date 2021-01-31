@@ -1,4 +1,4 @@
-import { Component, OnInit ,ViewChild, ElementRef, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit ,ViewChild, ElementRef, Output, EventEmitter, Renderer2} from '@angular/core';
 import { MovieService } from 'src/app/services/movies.service';
 import { Observable } from 'rxjs';
 import { Movie } from 'src/app/core/Movie';
@@ -14,9 +14,9 @@ import  {faAngleRight, faAngleLeft} from "@fortawesome/free-solid-svg-icons";
 
       transition("* => *" ,[
         query(":enter", [
-          style({opacity:0, transform: 'translateX(50px)'}),
-          stagger(50,
-            animate('1.2s ease', style({opacity:1,transform: 'translateX(-4px)'})))
+          style({opacity:0, transform: 'translate(-4px,75px)'}),
+          stagger(100,
+            animate('1.2s  ease', style({opacity:1,transform: 'translate(-4px,0px)'})))
         ])
       ])
     ])
@@ -26,8 +26,6 @@ export class MoviesCarrouselComponent implements OnInit {
 
   movies$ ?: Observable<Movie[]>;
 
-  movieIsSelected = true;
-
   arrowRight = faAngleRight;
 
   arrowLeft = faAngleLeft;
@@ -36,7 +34,7 @@ export class MoviesCarrouselComponent implements OnInit {
 
   @ViewChild('carrousel') carrousel !:  ElementRef<HTMLDivElement>;
 
-  constructor(private movies : MovieService) { }
+  constructor(private movies : MovieService,private render : Renderer2 ) { }
 
   ngOnInit(): void {
 
@@ -44,8 +42,8 @@ export class MoviesCarrouselComponent implements OnInit {
   }
 
   selectMovie(movie: Movie){
-
     this.selectedMovieData.emit(movie);
+    this.render.setStyle(this.carrousel.nativeElement, 'margin-top', '-13vh');
   }
 
   scroolRight(){

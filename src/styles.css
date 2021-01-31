@@ -16,6 +16,17 @@
 
 body{
   background: var(--light-gray);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  width: 5px;
+  background: var(--light-gray);
+}
+
+body::-webkit-scrollbar-thumb{
+  width: 5px;
+  background: var(--gray);
 }
 
 ul {

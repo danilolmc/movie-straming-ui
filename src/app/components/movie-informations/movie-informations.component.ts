@@ -13,16 +13,16 @@ import { ManageMovieVisibilityService } from 'src/app/services/manage-trailer-vi
     trigger('showHideFooter', [
       state('isHidden', style({
         opacity: 0,
-        transform: 'translateY(10vh)',
+        transform: 'translateY(200px)',
         pointerEvents: 'none',
 
       })),
 
       state('isShown', style({
         opacity: 1,
-        transform: 'translate(0vw,-2.2vh)',
+        transform: 'translate(0vw,0px)',
         pointerEvents: 'all',
-        marginBottom: '0%'
+        bottom: "0"
       })),
 
       transition('isHidden=>isShown', animate('.5s ease')),
@@ -59,7 +59,6 @@ export class MovieInformationsComponent implements OnInit {
 
    playVideo(){
      this.modalService.seeVideo(true, this.movie.trailerurl);
-     console.log(this.movie.trailerurl)
    }
 
 }
